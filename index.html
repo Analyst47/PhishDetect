@@ -2,42 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>PhishDetect Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>PhishDetect SOC Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
+
 <div class="grid-bg"></div>
+
 <header>
-  <h1>🛡️ PhishDetect Dashboard</h1>
-  <p class="subtitle">Professional cyber-themed phishing URL analyzer</p>
+  <h1>🛡️ PhishDetect SOC Dashboard</h1>
+  <p class="subtitle">Cybersecurity dashboard for phishing URL analysis — Professional SOC look & feel</p>
 </header>
 
 <main>
-  <section class="input-panel card">
-    <h2>Analyze URL</h2>
-    <input id="url" placeholder="https://example.com/login" />
+  <!-- URL Input Section -->
+  <section class="input-section card">
+    <h2>Analyze a URL</h2>
+    <input id="url" placeholder="Enter URL here (https://example.com)" />
     <button id="checkBtn">Analyze</button>
     <div id="result" class="result hidden"></div>
   </section>
 
-  <section class="stats-panel card">
+  <!-- Stats Section -->
+  <section class="stats-section card">
     <h2>Dashboard Stats</h2>
-    <div class="stat-card">
-      <h3>Total URLs</h3>
-      <p id="totalUrls">0</p>
+    <div class="stat-grid">
+      <div class="stat-card">
+        <h3>Total URLs</h3>
+        <p id="totalUrls">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Safe</h3>
+        <p id="safeUrls">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Suspicious</h3>
+        <p id="suspiciousUrls">0</p>
+      </div>
+      <div class="stat-card">
+        <h3>Malicious</h3>
+        <p id="maliciousUrls">0</p>
+      </div>
     </div>
-    <div class="stat-card">
-      <h3>Safe URLs</h3>
-      <p id="safeUrls">0</p>
-    </div>
-    <div class="stat-card">
-      <h3>Malicious URLs</h3>
-      <p id="maliciousUrls">0</p>
-    </div>
+    <canvas id="distributionChart"></canvas>
   </section>
 
+  <!-- Demo Section -->
   <section class="demo card">
     <h2>Demo Screenshot</h2>
     <img src="assets/demo.png" alt="Demo screenshot" />
@@ -45,4 +58,9 @@
 </main>
 
 <footer>
-  <p>Made by Fahim Abrar • B.S. Computing & Informatics (Cybersecurity) • Rowan Univer
+  <p>Made by Fahim Abrar • B.S. Computing & Informatics (Cybersecurity) • Rowan University</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
