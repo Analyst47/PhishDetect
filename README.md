@@ -1,20 +1,40 @@
-# PhishDetect (GitHub Pages) — Client-side Phishing URL Analyzer
+# 🛡️ PhishDetect SOC Dashboard
 
-PhishDetect is a small educational phishing URL analyzer that runs entirely in the browser. It's a static site hosted with GitHub Pages — no server, no cloud functions, and no external API required.
+<a href="https://github.com/fahimabrar/PhishDetect-GH"><img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://YOUR_USERNAME.github.io/PhishDetect-GH/"><img src="https://img.shields.io/badge/Live-Dashboard-00fff6?style=for-the-badge" /></a>
 
-## How it works
-- Loads in your browser and analyzes URLs using local heuristics.
-- Classifies a URL as **Safe**, **Suspicious**, or **Malicious** and explains why.
-- Useful for demonstrations, interviews, and portfolio showcases.
+---
 
-## To publish (quick)
-1. Create a repository (e.g., `PhishDetect-GH`).
-2. Add these files to the repo root: `index.html`, `styles.css`, `script.js`, `README.md`.
-3. Create an `assets/` folder and upload `demo.png`.
-4. In GitHub repo → Settings → Pages → Source: `main` branch / `root` → Save.
-5. Visit your site at `https://YOUR_USERNAME.github.io/REPO_NAME/`.
+## **Overview**
 
-## Notes
-This is a heuristic tool for learning and portfolio demos. For production use or enterprise detection, integrate threat intelligence APIs and server-side analysis.
+PhishDetect SOC Dashboard is a **professional, cyber-themed phishing URL analysis tool** built with **HTML, CSS, and JavaScript**.  
+It’s designed to mimic a **SOC analyst interface**, providing detailed URL classification, live stats, and interactive visualizations — all **client-side**, fully static, and hosted on **GitHub Pages**.
 
-Made by **Fahim Abrar** — B.S. Computing & Informatics (Cybersecurity), Rowan University.
+This dashboard is perfect for showcasing **cybersecurity projects** in portfolios and LinkedIn profiles.
+
+---
+
+## **Features**
+
+- **Real-time URL classification**: Safe, Suspicious, Malicious  
+- **Heuristic analysis** with detailed explanations  
+- **Interactive statistics**: Total URLs, Safe/Suspicious/Malicious counts  
+- **Dynamic charts** with Chart.js  
+- **Neon/cyber theme** with animated background and glowing cards  
+- **Expandable result section** with recommendations  
+- **Responsive design** for desktops and tablets  
+
+---
+
+## **Code Snippets**
+
+### **HTML (input section)**
+
+```html
+<section class="input-section card">
+  <h2>Analyze a URL</h2>
+  <input id="url" placeholder="Enter URL here (https://example.com)" />
+  <button id="checkBtn">Analyze</button>
+  <div id="result" class="result hidden"></div>
+</section>
+
