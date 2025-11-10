@@ -20,4 +20,4 @@ It provides detailed URL classification, risk evaluation, and visual statistics 
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/fahimabrar/PhishDetect-GH.git
+git clone https://github.com/analyst47/PhishDetect-GH.git
