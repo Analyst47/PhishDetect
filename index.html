@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PhishDetect — Client-side Phishing Analyzer</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🛡️ PhishDetect</h1>
+    <p class="subtitle">Client-side phishing URL analyzer — runs entirely in your browser (hosted with GitHub Pages).</p>
+  </header>
+
+  <main>
+    <section class="box">
+      <label for="url">Enter a URL to analyze</label>
+      <input id="url" placeholder="https://example.com/login" />
+      <button id="checkBtn">Analyze</button>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="box explain">
+      <h2>How it works (client‑side heuristics)</h2>
+      <ul>
+        <li>Checks URL structure (https, IP address, length, dots, hyphens)</li>
+        <li>Looks for suspicious tokens (login, secure, update, account)</li>
+        <li>Scores URL and gives classification: <strong>Safe</strong>, <strong>Suspicious</strong>, or <strong>Malicious</strong></li>
+      </ul>
+      <p class="muted">Note: This is a heuristic, educational tool — not a replacement for enterprise threat intelligence.</p>
+    </section>
+
+    <section class="box demo">
+      <h2>Demo screenshot</h2>
+      <img src="assets/demo.png" alt="Demo screenshot" />
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by Fahim Abrar • B.S. Computing & Informatics (Cybersecurity) • Rowan University</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
